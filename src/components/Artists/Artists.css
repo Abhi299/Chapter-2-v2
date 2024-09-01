@@ -1,0 +1,134 @@
+.artists-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Arial", sans-serif;
+}
+
+.genre-section {
+  margin-bottom: 40px;
+}
+
+.genre-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.artists-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.artist-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  box-sizing: border-box;
+}
+
+.artist-card:hover {
+  transform: translateY(-10px);
+}
+
+.artist-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.artist-name {
+  font-size: 1.2em;
+  margin: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.artist-description {
+  font-size: 1em;
+  margin: 0 15px 15px;
+  color: #666;
+  text-align: center;
+}
+
+.artist-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.artist-main-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.artist-main-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.artist-main-description {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+@media (max-width: 768px) {
+  .artist-main-title {
+    font-size: 1.5rem;
+  }
+
+  .artist-main-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .artist-card {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .artist-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .artist-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .genre-title {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .artist-name,
+  .artist-description {
+    font-size: 1em;
+    margin: 10px;
+  }
+}

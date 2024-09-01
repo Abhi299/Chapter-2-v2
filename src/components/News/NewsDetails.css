@@ -1,0 +1,15 @@
+.news-content {
+  border-bottom: solid 1px black;
+  margin: 2% 10%;
+}
+
+.news-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 2% 10%;
+}
+
+.news-image {
+  height: 400px;
+  width: auto;
+}

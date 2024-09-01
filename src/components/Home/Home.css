@@ -1,0 +1,287 @@
+.hero {
+  position: relative;
+  height: 60vh;
+  z-index: 1;
+}
+
+.hero-text {
+  position: absolute;
+  top: 60%;
+  left: 40px;
+  transform: translateY(-50%);
+  width: 35%;
+  z-index: 2;
+}
+
+.hero-heading {
+  font-family: "Urbanist", sans-serif;
+  font-weight: normal;
+  font-size: 2.5vw;
+  color: white;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  );
+  z-index: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-us {
+  height: 20vw;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #111;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.about-us h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.about-us h4 {
+  font-size: 1rem;
+  font-weight: normal;
+  width: 30%;
+}
+
+.rounded-button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s,
+    transform 0.3s;
+}
+
+.rounded-button:hover {
+  background-color: white;
+  font-weight: 700;
+  color: black;
+  transform: scale(1.05);
+}
+
+.grid-container {
+  background-color: #181a23;
+  margin: 0 auto;
+  padding: 40px 20px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  width: 40%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover {
+  transform: scale(1.05);
+}
+
+.carousel-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.feature-image {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+}
+
+.first {
+  flex-direction: row-reverse;
+}
+
+.content-container {
+  width: calc(40% - 20px);
+  padding: 0 10px;
+}
+
+.content-text-container {
+  padding: 0 15px;
+}
+
+.content-heading {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.content-paragraph {
+  font-size: 1rem;
+  color: white;
+  line-height: 1.6;
+}
+
+.artists-heading {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.newsletter {
+  background-color: #1f2d2a;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 20px;
+  margin: 24px 0;
+}
+
+.newsletter-text {
+  width: 40%;
+}
+
+.newsletter-field-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.newsletter-field {
+  width: 100%;
+  color: rgb(36, 35, 42);
+  font-size: 14px;
+  border-radius: 16px;
+  padding: 8px 16px;
+  margin: 24px 24px;
+  border: 2px solid transparent;
+  box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+  background: rgb(251, 251, 251);
+  transition: all 0.1s ease 0s;
+  :focus {
+    border: 2px solid rgb(124, 138, 255);
+  }
+}
+
+.newsletter-button {
+  border-radius: 16px;
+  border: solid 1px #6bffb8;
+  padding: 8px 24px;
+  background-color: #6bffb8;
+  color: #11261d;
+  transition: transform 0.3s ease-in-out;
+}
+
+.newsletter-button:hover {
+  transform: scale(1.05);
+}
+
+.newsletter h2,
+h4 {
+  font-weight: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-item {
+    flex-direction: column;
+  }
+
+  .about-us h4 {
+    width: 40%;
+  }
+
+  .image-container {
+    padding-top: 24px;
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .feature-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .content-container {
+    width: calc(80% - 20px);
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .hero-text {
+    width: 80%;
+    top: 75%;
+  }
+
+  .hero-heading {
+    font-size: 24px;
+  }
+
+  .about-us {
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .newsletter {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .newsletter-field-section {
+    flex-direction: column;
+  }
+}

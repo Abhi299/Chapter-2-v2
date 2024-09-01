@@ -1,0 +1,125 @@
+.about-grid-container {
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  max-width: 1200px;
+}
+
+.about-grid-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+}
+
+.about-feature-image,
+.about-logo-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.about-content-container {
+  flex: 2;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.about-content-text-container {
+  padding: 0 15px;
+}
+
+.about-content-heading {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.about-content-paragraph {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.newsletter.about-newsletter {
+  background-color: #2d1f2c;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.newsletter-text h2,
+.newsletter-text h4 {
+  margin: 0 0 10px;
+}
+
+.newsletter-field-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.newsletter-field {
+  padding: 10px;
+  font-size: 1rem;
+  width: 300px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.newsletter-button {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  background-color: #ff6f61;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.newsletter-button:hover {
+  background-color: #e65c50;
+}
+
+.zigzag:nth-child(even) .about-grid-item {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 768px) {
+  .zigzag:nth-child(2n) .about-grid-item {
+    flex-direction: column;
+  }
+
+  .about-grid-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-content-container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .about-image-container {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .newsletter-field {
+    width: 70%;
+  }
+}
